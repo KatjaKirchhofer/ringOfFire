@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "ring-of-fire-de48f": {
+      "hosting": {
+        "ringoffire": [
+          "ring-of-fire-de48f"
+        ]
+      }
+    }
+  }
+}

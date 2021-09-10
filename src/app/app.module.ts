@@ -17,7 +17,8 @@ import { MatCardModule } from '@angular/material/card';
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { GameDescriptionComponent } from './game-description/game-description.component';
-import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireStorageModule } from 'angularfire2/storage';
 import { environment } from '../environments/environment';
 
 @NgModule({
@@ -31,6 +32,7 @@ import { environment } from '../environments/environment';
   ],
   imports: [
     AngularFireModule.initializeApp(environment.firebase),
+    AngularFireStorageModule,
     BrowserModule,
     AppRoutingModule,
     MatButtonModule,

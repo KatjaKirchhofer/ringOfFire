@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 import { Game } from 'src/models/game';
 import { MatDialog } from '@angular/material/dialog';
 import { DialogAddPlayerComponent } from '../dialog-add-player/dialog-add-player.component';
-
+import { AngularFirestore } from '@angular/fire/compat/firestore';
 @Component({
   selector: 'app-game',
   templateUrl: './game.component.html',
@@ -14,7 +14,7 @@ export class GameComponent implements OnInit {
   currentCard: string = '';
   game: Game;
 
-  constructor(public dialog: MatDialog) { }
+  constructor(public dialog: MatDialog, public firestore: AngularFirestore) { }
 
   ngOnInit(): void { //was bedeutet void
     this.newGame(); //um die Funktion aufzurufen
